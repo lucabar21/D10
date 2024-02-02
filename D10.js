@@ -449,7 +449,20 @@ console.log("Es.17: ", strText, result);
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
-const searchAndDivide = (str) => {};
+// const searchAndDivide = (str) => {};
+
+function searchAndDivide(Term, movies) {
+  const matchMovies = movies.filter((movie) => movie.Title.toLowerCase().includes(Term.toLowerCase()));
+  const unmatchMovies = movies.filter((movie) => !movie.Title.toLowerCase().includes(Term.toLowerCase()));
+
+  return { match: matchMovies, unmatch: unmatchMovies };
+}
+
+const Term = "Avengers";
+const result2 = searchAndDivide(Term, movies);
+
+console.log("Es.18: ", result2.match);
+console.log("Es.18: ", result2.unmatch);
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
