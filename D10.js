@@ -455,6 +455,12 @@ const searchAndDivide = (str) => {};
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+const removeIndex = (num, movies) => {
+  movies.splice(num, 1);
+  return movies;
+};
+console.log("Es.19", removeIndex(12, movies));
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
