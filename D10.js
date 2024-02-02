@@ -449,8 +449,6 @@ console.log("Es.17: ", strText, result);
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
-// const searchAndDivide = (str) => {};
-
 function searchAndDivide(Term, movies) {
   const matchMovies = movies.filter((movie) => movie.Title.toLowerCase().includes(Term.toLowerCase()));
   const unmatchMovies = movies.filter((movie) => !movie.Title.toLowerCase().includes(Term.toLowerCase()));
