@@ -435,15 +435,21 @@ sumAllTheYears(movies);
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-// const searchByTitle = (str) => {
-
-// };
-// searchByTitle("Avengers");
+const searchByTitle = (str, movies) => {
+  return movies.filter((movie) => {
+    return movie.Title.includes(str);
+  });
+};
+let strText = "of";
+const result = searchByTitle(strText, movies);
+console.log("Es.17: ", strText, result);
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+
+const searchAndDivide = (str) => {};
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
